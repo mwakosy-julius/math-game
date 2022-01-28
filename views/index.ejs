@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>GAME</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="cover-container d-flex p-3 mx-auto flex-column" style="vertical-align: middle;">
+			
+			<header class="mt-2 d-flex justify-content-center" id="ofheader">
+		    <div class="text-center mt-2">
+		      <h1> MATH-CHALLENGE GAME </h1>
+		      <h6 style="color:#90A5A8;font-weight:200; padding:4px 0 15px 0;font-style: italic;">
+		      Answer random math multiplication Questions</h6>
+		    </div>
+			 </header>
+			 
+			 <main class="px-3 border rounded-2 mt-2" style="vertical-align: middle;">
+			 	
+				<div class="d-flex justify-content-center m-2 p-2 border-bottom">
+					<!--<p style="font-size: 1.5rem;"><%= num1 %> X <%= num2 %></p>-->
+				</div>
+
+				<div class="d-flex flex-row justify-content-center m-2 mt-2 px-3 p-2">
+					<form class="" id="answer" method="post" autocomplete="off">
+						<input type="number" class="text-center" name="number" id="entrance" autocomplete="off">
+						<input type="submit" name="OK" value="OK" id="ok">
+					</form>
+				</div>
+
+				<footer class="d-flex justify-content-center mt-auto text-white-50">
+    			<!--<p style="font-size: 1.5rem; color: darkred;"><%= feedback %></p>-->
+  			</footer>
+
+			</main>			
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+			
+	</body>
+</html>
+
+
+
+<style type="text/css">
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+	height: 100vh;
+  width: 100vw;
+  box-shadow: inset 0 0 5rem rgba(255, 255, 255, .5);
+	background-size: cover;
+}
+
+.cover-container {
+  max-width: 60em;
+}
+
+#ofheader{
+	margin-top: 10rem;
+	margin-bottom: 3rem;
+}
+
+#sub-main{
+	display: flex;
+	justify-content: center;		
+	position: relative;
+	margin: 0.5rem;
+	flex-direction: column;
+	margin: 1rem;
+	padding: 0.5rem;
+}
+
+#answer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-direction: column;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	text-align: center;
+}
+
+#entrance{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	padding: 0.1rem;
+	width: 15rem;
+	height: 3rem;
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+}
+
+#ok{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	padding: 0.1rem;
+	width: 15rem;
+	height: 2rem;
+}
+
+
+</style>
+
+<script type="text/javascript">
+	
+</script>
