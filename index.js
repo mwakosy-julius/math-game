@@ -13,29 +13,28 @@ let port = process.env.PORT || 3000
 app.use("/", async (req, res)=>{
   console.log("I love Games!");
 
-  let count = 0;
-  let score = 0;
-  let feedback = "Anser me!"
-  const num1 = 0;
-  const num2 = 0;
+  let feedback;
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); 
+  };
+
+  const num1 = getRandomInt(1, 100);
+  const num2 = getRandomInt(1, 100);
   const answer = num1 * num2;
+  const userAnswer = req.body.number; 
 
-  const userAnswer = req.body.number;
-
-  if(userAnswer == answer){
-    feedback  = "You got me right"
-    score +=1;
-  } else{
-    feedback = "You got me wrong"
-    }
-  
   const viewData = {
     num1: num1,
     num2: num2,
     feedback: feedback,
+    answer: answer,
   }
+
   res.render('index.ejs', viewData);
-});
+
+}); 
 
 
 app.listen(port,()=>{

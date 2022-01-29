@@ -21,19 +21,20 @@
 			 <main class="px-3 border rounded-2 mt-2" style="vertical-align: middle;">
 			 	
 				<div class="d-flex justify-content-center m-2 p-2 border-bottom">
-					<!--<p style="font-size: 1.5rem;"><%= num1 %> X <%= num2 %></p>-->
+					<p style="font-size: 1.5rem;"><%= num1 %> x <%= num2 %></p>
 				</div>
 
 				<div class="d-flex flex-row justify-content-center m-2 mt-2 px-3 p-2">
 					<form class="" id="answer" method="post" autocomplete="off">
-						<input type="number" class="text-center" name="number" id="entrance" autocomplete="off">
-						<input type="submit" name="OK" value="OK" id="ok">
+						<input type="text" class="text-center" name="number" id="entrance" autocomplete="off">
+						<input type="submit" formaction="correctness()" name="OK" value="OK" id="ok">
 					</form>
 				</div>
 
 				<footer class="d-flex justify-content-center mt-auto text-white-50">
-    			<!--<p style="font-size: 1.5rem; color: darkred;"><%= feedback %></p>-->
+    			<p id="feedback" style="font-size: 1.0rem; color: green;"><%= feedback %></p>
   			</footer>
+  			<div id="answer"><%= answer %></div>
 
 			</main>			
 		</div>
@@ -43,7 +44,24 @@
 	</body>
 </html>
 
+<script type="text/javascript">
+let feedback = document.getElementById('feedback');
+let answer = document.getElementById('answer');
+let userAnswer = document.getElementById('id');
 
+function correctness() {
+	if(userAnswer.innerHTML == answer.innerHTML){
+      feedback.innerHTML = 'Correct';
+    }else{
+      feedback.innerHTML = 'Wrong';
+  };
+};
+
+if(feedback.innerHTML == 'Wrong'){
+	feedback.style.color = 'red';
+}
+	
+</script>
 
 <style type="text/css">
 html,
@@ -119,6 +137,3 @@ body {
 
 </style>
 
-<script type="text/javascript">
-	
-</script>
