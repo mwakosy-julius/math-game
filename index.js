@@ -13,7 +13,6 @@ let port = process.env.PORT || 3000
 app.use("/", async (req, res)=>{
   console.log("I love Games!");
 
-  let feedback;
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -28,7 +27,6 @@ app.use("/", async (req, res)=>{
   const viewData = {
     num1: num1,
     num2: num2,
-    feedback: feedback,
     answer: answer,
   }
 

@@ -27,14 +27,13 @@
 				<div class="d-flex flex-row justify-content-center m-2 mt-2 px-3 p-2">
 					<form class="" id="answer" method="post" autocomplete="off">
 						<input type="text" class="text-center" name="number" id="entrance" autocomplete="off">
-						<input type="submit" formaction="correctness()" name="OK" value="OK" id="ok">
+						<input type="submit" onclick="loadAnswer()" name="OK" value="OK" id="ok">
 					</form>
 				</div>
 
 				<footer class="d-flex justify-content-center mt-auto text-white-50">
-    			<p id="feedback" style="font-size: 1.0rem; color: green;"><%= feedback %></p>
+    			<p id="result" style="font-size: 1.0rem; color: white; opacity: 0;"><%= answer %></p>
   			</footer>
-  			<div id="answer"><%= answer %></div>
 
 			</main>			
 		</div>
@@ -45,22 +44,11 @@
 </html>
 
 <script type="text/javascript">
-let feedback = document.getElementById('feedback');
-let answer = document.getElementById('answer');
-let userAnswer = document.getElementById('id');
-
-function correctness() {
-	if(userAnswer.innerHTML == answer.innerHTML){
-      feedback.innerHTML = 'Correct';
-    }else{
-      feedback.innerHTML = 'Wrong';
-  };
+let result = document.getElementById('result');
+function loadAnswer() {
+	return result.style.color = 'dodgerblue', result.style.opacity = 0.75; 
 };
 
-if(feedback.innerHTML == 'Wrong'){
-	feedback.style.color = 'red';
-}
-	
 </script>
 
 <style type="text/css">
